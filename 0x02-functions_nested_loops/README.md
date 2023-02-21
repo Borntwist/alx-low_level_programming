@@ -1,0 +1,1 @@
+0x02 c functions, nested loops is aim to evaluate a programmer ability in compiling functions relatively with nected loops in C-programming. using arithematical and geomentarical loops nested in binary functions.
