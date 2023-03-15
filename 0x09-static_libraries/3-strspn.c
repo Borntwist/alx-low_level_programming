@@ -1,8 +1,6 @@
-#include "main.h"
-
 /**
  * _strspn - a function that gets the
- * length of a prexif substring
+ *           length of a prexif substring
  *
  * @s: pointer to string input
  * @accept: substring prefix to look for

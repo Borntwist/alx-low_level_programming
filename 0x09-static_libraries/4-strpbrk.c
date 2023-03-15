@@ -1,23 +1,19 @@
 #include "main.h"
 
 /**
-* _strpbrk - Entry point
-* @s: input
-* @accept: input
-* Return: Always 0 (Success)
-*/
+ * _strpbrk - finds first matching char in string
+ * @s: input string to search for matching char
+ * @accept: characters that could be matched
+ * Return: pointer to matching char
+ */
 
 char *_strpbrk(char *s, char *accept)
 {
-int k;
-while (*s)
-{
-for (k = 0; accept[k]; k++)
-{
-if (*s == accept[k])
-return (s);
-}
-s++;
-}
-return ('\0');
+	unsigned int i, j;
+
+	for (i = 0; s[i] != '\0'; i++)
+		for (j = 0; accept[j] != '\0'; j++)
+			if (s[i] == accept[j])
+				goto exit;
+exit: return (s[i] != '\0' ? s + i : '\0');
 }
