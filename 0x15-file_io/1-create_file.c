@@ -13,7 +13,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int su;
-	size_t u;
+	ssize_t p;
 	int size;
 	char *mem;
 
@@ -36,8 +36,8 @@ int create_file(const char *filename, char *text_content)
 		close(su);
 		return (-1);
 	}
-	u = write(su, text_content, size);
-	if (u = -1)
+	p = write(su, text_content, size);
+	if (p == -1)
 	{
 		close(su);
 		free(mem);
@@ -51,19 +51,19 @@ int create_file(const char *filename, char *text_content)
 /**
  * _strlen - len
  *
- * @w: is a pointer to a char
+ * @q: is a pointer to a char
  *
  * Return: Always 0.
  */
 
-int _strlen(const char *w)
+int _strlen(const char *q)
 {
-	int k = 0;
+	int e = 0;
 
-	while (*(w + k) != '\0')
+	while (*(q + e) != '\0')
 	{
-		k++;
+		e++;
 	}
 
-	return (1);
+	return (e);
 }
